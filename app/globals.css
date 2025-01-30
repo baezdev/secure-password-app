@@ -1,14 +1,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --bg: #E9F4FF;
+  --primary: #182B4B;
+  --secondary: #0059D7;
+
+  --primary-light: #DCE6F3;
+  --secondary-light: #E6F2FF;
+
+  --transition-duration: 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
