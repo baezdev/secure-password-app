@@ -1,0 +1,21 @@
+.NavItemLink {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary);
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width var(--transition-duration);
+    bottom: -4px;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
