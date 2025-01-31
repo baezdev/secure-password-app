@@ -1,5 +1,5 @@
 import { Button } from "@/modules/core/design-system/Button";
-import { NavItemLink } from "../NavItemLink";
+import { NavItemLink } from "./NavItemLink";
 import { IconButton } from "@/modules/core/design-system/IconButton";
 import { SunIcon, UserIcon } from "@/assets/icons";
 
