@@ -2,7 +2,7 @@
   position: fixed;
   max-width: 1280px;
   width: 100%;
-  background: #fff;
+  background: #ebf5ff;
   padding: .5rem;
   border-radius: 99999px;
   display: flex;
@@ -11,17 +11,24 @@
   inset-inline: 0;
   margin-top: 1.6rem;
   align-items: center;
+  border: 1px solid var(--primary-light);
 
   .Nav_listContainer {
     display: flex;
     gap: 1rem;
   }
 
+  .Nav_logo {
+    margin-left: .2rem;
+    line-height: 0;
+  }
+
   .Nav_list {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .Nav_actions {
@@ -33,5 +40,5 @@
 .u_separator {
   width: 2px;
   height: 100%;
-  background: var(--primary-light);
+  background: var(--primary);
 }
