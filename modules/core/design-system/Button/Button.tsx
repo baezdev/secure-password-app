@@ -10,14 +10,19 @@ interface ButtonProps {
 
 export function Button({
   children,
-  variant,
+  variant = "primary",
   type,
   href,
   onClick,
 }: ButtonProps) {
+  const classVariant = {
+    primary: css.Button__primary,
+    secondary: css.Button__secondary,
+  };
+
   if (href) {
     return (
-      <a href={href} className={`${css.Button} ${css.Button__primary}`}>
+      <a href={href} className={`${css.Button} ${classVariant[variant]}`}>
         <span>{children}</span>
       </a>
     );
@@ -27,7 +32,7 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
-      className={`${css.Button} ${css.Button__primary}`}
+      className={`${css.Button} ${classVariant[variant]}`}
     >
       <span>{children}</span>
     </button>

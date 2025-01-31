@@ -10,33 +10,47 @@
   font-size: 1.2rem;
   position: relative;
   overflow: hidden;
+  /*   border: 1px solid transparent; */
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    z-index: 1;
+    transition-property: transform;
+    transition-duration: var(--transition-duration);
+    border-radius: 99999px;
+
+  }
+
+  &:hover::before {
+    transform: translateX(-50%);
+  }
+
+  & span {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+  }
 
   &.Button__primary {
     color: #fff;
 
-    & span {
-      color: #fff;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: .3rem;
+    &::before {
+      background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 50%, var(--secondary) 100%);
     }
+  }
+
+  &.Button__secondary {
+    color: var(--primary);
+    border-color: var(--primary);
 
     &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 200%;
-      height: 100%;
-      background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 50%, var(--secondary) 100%);
-      z-index: 1;
-      transition-property: transform;
-      transition-duration: var(--transition-duration);
-    }
-
-    &:hover::before {
-      transform: translateX(-50%);
+      background: linear-gradient(to right, var(--primary-light) 0%, var(--secondary-light) 50%, var(--secondary-light) 100%);
     }
   }
 }
