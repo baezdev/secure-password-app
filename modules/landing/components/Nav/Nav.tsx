@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/modules/core/design-system/Button";
 import { NavItemLink } from "./NavItemLink";
 import { IconButton } from "@/modules/core/design-system/IconButton";
@@ -5,25 +7,28 @@ import { SunIcon, UserIcon } from "@/assets/icons";
 
 import css from "./Nav.module.css";
 import Image from "next/image";
+import { useScrollPosition } from "../../hooks";
+
+const listNavLinks = [
+  {
+    href: "#",
+    text: "Caracteristicas",
+  },
+  {
+    href: "#",
+    text: "Sobre nosotros",
+  },
+  {
+    href: "#",
+    text: "Preguntas frecuentes",
+  },
+];
 
 export function Nav() {
-  const listNavLinks = [
-    {
-      href: "#",
-      text: "Caracteristicas",
-    },
-    {
-      href: "#",
-      text: "Sobre nosotros",
-    },
-    {
-      href: "#",
-      text: "Preguntas frecuentes",
-    },
-  ];
+  const scrollTop = useScrollPosition()
 
   return (
-    <nav className={css.Nav}>
+    <nav className={`${css.Nav} ${scrollTop > 100 ? css.Nav__fixed : css.Nav__floating}`}>
       <div className={css.Nav_listContainer}>
         <a href="/" className={css.Nav_logo}>
           <Image
@@ -36,9 +41,9 @@ export function Nav() {
         <span className={css.u_separator}></span>
         <ul className={css.Nav_list}>
           {listNavLinks.map(({ href, text }) => (
-            <ul key={`${href}-${text}`}>
+            <li key={`${href}-${text}`}>
               <NavItemLink href={href}>{text}</NavItemLink>
-            </ul>
+            </li>
           ))}
         </ul>
       </div>
