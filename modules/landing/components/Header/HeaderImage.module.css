@@ -28,7 +28,7 @@
 
 .Header_logos__left img:nth-child(1),
 .Header_logos__right img:nth-child(1) {
-  animation-delay: 0s;
+  animation-delay: 1s;
 }
 
 .Header_logos__left img:nth-child(2),
@@ -38,9 +38,8 @@
 
 .Header_logos__left img:nth-child(3),
 .Header_logos__right img:nth-child(3) {
-  animation-delay: 1s;
+  animation-delay: 0s;
 }
-
 
 @keyframes moveToCenterFromLeft {
   0% {
