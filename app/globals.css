@@ -6,6 +6,10 @@
   --primary: #182B4B;
   --secondary: #0059D7;
 
+  --primary-transparent: hsla(218, 52%, 19%, 0.500);
+  --secondary-transparent: hsla(215, 100%, 42%, 0.500);
+
+
   --primary-light: #DCE6F3;
   --secondary-light: #E6F2FF;
 
@@ -39,7 +43,8 @@ body {
   margin: 0;
 }
 
-a, button {
+a,
+button {
   color: inherit;
   text-decoration: none;
   border: none;
