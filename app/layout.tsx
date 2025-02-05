@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import fontLocal from "next/font/local";
 import "./globals.css";
+import { useThemeStore } from "@/modules/core/context/Theme";
+import { ThemeProvider } from "@/modules/core/providers/ThemeProvider";
 
 const myFont = fontLocal({
   src: "../public/fonts/Raleway-VariableFont_wght.ttf",
@@ -9,7 +11,8 @@ const myFont = fontLocal({
 
 export const metadata: Metadata = {
   title: "PassFort",
-  description: "Con PassFort ¡Olvídate de olvidar! Protege y accede a tus contraseñas en un solo lugar y con un clic. La seguridad nunca fue tan sencilla.",
+  description:
+    "Con PassFort ¡Olvídate de olvidar! Protege y accede a tus contraseñas en un solo lugar y con un clic. La seguridad nunca fue tan sencilla.",
 };
 
 export default function RootLayout({
@@ -19,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${myFont.className}`}>{children}</body>
+      <body className={`${myFont.className}`}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
