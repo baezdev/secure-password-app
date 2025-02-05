@@ -1,7 +1,13 @@
+import { useThemeStore } from "@/modules/core/context/Theme";
 import { useEffect, useState } from "react";
 
-export function useScrollPosition() {
+export function useNav() {
   const [scrollTop, setScrollTop] = useState(0);
+  const { changeTheme, detectSystemTheme, theme } = useThemeStore();
+
+  useEffect(() => {
+    detectSystemTheme();
+  }, [detectSystemTheme]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,8 +18,8 @@ export function useScrollPosition() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    }
-  }, [])
+    };
+  }, []);
 
-  return scrollTop;
+  return { scrollTop, changeTheme, theme };
 }
