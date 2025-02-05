@@ -1,5 +1,5 @@
 .IconButton {
-  background: #fff;
+  background: var(--background);
   border-radius: 99999px;
   border: none;
   color: var(--primary);
@@ -12,10 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid transparent;
   
   &:hover {
     background: var(--secondary-light);
-    border: 1px solid var(--primary-light);
   }
 }
