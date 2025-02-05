@@ -6,6 +6,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
   href?: string;
+  ariaLabel: string;
 }
 
 export function Button({
@@ -14,6 +15,7 @@ export function Button({
   type,
   href,
   onClick,
+  ariaLabel,
 }: ButtonProps) {
   const classVariant = {
     primary: css.Button__primary,
@@ -22,7 +24,11 @@ export function Button({
 
   if (href) {
     return (
-      <a href={href} className={`${css.Button} ${classVariant[variant]}`}>
+      <a
+        href={href}
+        className={`${css.Button} ${classVariant[variant]}`}
+        aria-label={ariaLabel}
+      >
         <span>{children}</span>
       </a>
     );
@@ -33,6 +39,7 @@ export function Button({
       type={type}
       onClick={onClick}
       className={`${css.Button} ${classVariant[variant]}`}
+      aria-label={ariaLabel}
     >
       <span>{children}</span>
     </button>
