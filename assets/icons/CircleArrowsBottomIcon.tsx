@@ -1,6 +1,6 @@
 import { IconProps } from "./Icons";
 
-export function CircleArrowsBottom({ color = "currentColor", size = 24 }: IconProps) {
+export function CircleArrowsBottomIcon({ color = "currentColor", size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

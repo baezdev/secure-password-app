@@ -1,5 +1,7 @@
-export { SunIcon } from "./SunIcon";
+export { MoonOffIcon } from "./MoonOffIcon";
 export { UserIcon } from "./UserIcon";
 export { ArrowRight } from "./ArrowRight";
-export { CircleArrowsBottom } from "./CircleArrowsBottom";
+export { CircleArrowsBottomIcon } from "./CircleArrowsBottomIcon";
+export { MoonIcon } from "./MoonIcon";
+
 
