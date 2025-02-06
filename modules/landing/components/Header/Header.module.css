@@ -10,22 +10,13 @@
   padding: 9rem 1rem;
   width: 100%;
   height: auto;
+  transition: background var(--animation-duration) ease-in-out;
 }
 
 .Header_slogan {
   max-width: 50rem;
   text-align: center;
   margin: 0 auto;
-
-  h1 {
-    font-size: 5rem;
-    font-weight: 800;
-    background: linear-gradient(to right, var(--secondary), var(--primary), var(--secondary));
-    background-size: 200% auto;
-    background-clip: text;
-    color: transparent;
-    animation: moveText 2.5s linear infinite;
-  }
 
   p {
     max-width: 65%;
@@ -42,14 +33,4 @@
   justify-content: center;
   margin-top: 2.5rem;
   gap: 1rem;
-}
-
-@keyframes moveText {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 200% 50%;
-  }
 }
