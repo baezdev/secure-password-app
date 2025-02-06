@@ -1,0 +1,30 @@
+.Heading {
+  font-weight: 800;
+  background: linear-gradient(to right, var(--secondary), var(--primary), var(--secondary));
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  animation: moveText 2.5s linear infinite;
+
+  &.Heading__small {
+    font-size: 3rem;
+  }
+
+  &.Heading__medium {
+    font-size: 4rem;
+  }
+
+  &.Heading__large {
+    font-size: 5rem;
+  }
+}
+
+@keyframes moveText {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
