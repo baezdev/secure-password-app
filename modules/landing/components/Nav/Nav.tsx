@@ -1,13 +1,13 @@
-'use client'
+"use client";
+import Image from "next/image";
 
 import { Button } from "@/modules/core/design-system/Button";
 import { NavItemLink } from "./NavItemLink";
 import { IconButton } from "@/modules/core/design-system/IconButton";
-import { SunIcon, UserIcon } from "@/assets/icons";
+import { MoonOffIcon, UserIcon, MoonIcon } from "@/assets/icons";
+import { useNav } from "../../hooks";
 
 import css from "./Nav.module.css";
-import Image from "next/image";
-import { useScrollPosition } from "../../hooks";
 
 const listNavLinks = [
   {
@@ -25,14 +25,20 @@ const listNavLinks = [
 ];
 
 export function Nav() {
-  const scrollTop = useScrollPosition()
+  const { changeTheme, scrollTop, theme } = useNav();
 
   return (
-    <nav className={`${css.Nav} ${scrollTop > 100 ? css.Nav__fixed : css.Nav__floating}`}>
+    <nav
+      className={`${css.Nav} ${
+        scrollTop > 100 ? css.Nav__fixed : css.Nav__floating
+      }`}
+    >
       <div className={css.Nav_listContainer}>
         <a href="/" className={css.Nav_logo}>
           <Image
-            src="/images/logo.webp"
+            src={
+              theme === "light" ? "/images/logo.svg" : "/images/logo-dark.svg"
+            }
             alt="Logo de PassFort"
             width={150}
             height={45}
@@ -48,8 +54,12 @@ export function Nav() {
         </ul>
       </div>
       <div className={css.Nav_actions}>
-        <IconButton icon={SunIcon} />
-        <Button href="#">
+        <IconButton
+          icon={theme === "light" ? MoonIcon : MoonOffIcon}
+          onClick={changeTheme}
+          ariaLabel="Cambiar tema"
+        />
+        <Button href="#" ariaLabel="Iniciar sesión">
           Iniciar sesión <UserIcon />
         </Button>
       </div>
