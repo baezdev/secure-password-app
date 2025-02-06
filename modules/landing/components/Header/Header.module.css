@@ -4,7 +4,6 @@
 }
 
 .Header {
-  background: url("/images/bg.svg"), linear-gradient(to bottom, var(--bg) 65%, #fff);
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
