@@ -55,6 +55,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body .Body__dark {
+  background: var(--background);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
