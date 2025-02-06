@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import css from "./HeaderImage.module.css";
+import { useThemeStore } from "@/modules/core/context/Theme";
 
 export function HeaderImage() {
+  const { theme } = useThemeStore();
+
   return (
     <div className={css.Header_image}>
       <div className={`${css.Header_logos} ${css.Header_logos__left}`}>
@@ -25,7 +30,11 @@ export function HeaderImage() {
         />
       </div>
       <Image
-        src="/images/finger-lock-protect-svgrepo-com.svg"
+        src={
+          theme === "light"
+            ? "/images/finger-lock.svg"
+            : "/images/finger-lock-dark.svg"
+        }
         alt="Imagen de una huella con un candado en el centro, represetando seguridad"
         width={240}
         height={240}
