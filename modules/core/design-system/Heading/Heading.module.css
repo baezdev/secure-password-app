@@ -1,21 +1,46 @@
 .Heading {
-  font-weight: 800;
-  background: linear-gradient(to right, var(--secondary), var(--primary), var(--secondary));
+  background: linear-gradient(
+    to right,
+    var(--secondary),
+    var(--primary),
+    var(--secondary)
+  );
   background-size: 200% auto;
   background-clip: text;
   color: transparent;
   animation: moveText 2.5s linear infinite;
+  text-wrap: pretty;
 
   &.Heading__small {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
 
   &.Heading__medium {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   &.Heading__large {
     font-size: 5rem;
+  }
+
+  &.Heading__center {
+    text-align: center;
+  }
+
+  &.Heading__left {
+    text-align: left;
+  }
+
+  &.Heading__right {
+    text-align: right;
+  }
+
+  &.Heading__bold {
+    font-weight: 800;
+  }
+
+  &.Heading__semi-bold {
+    font-weight: 600;
   }
 }
 
