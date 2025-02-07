@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import fontLocal from "next/font/local";
-import "./globals.css";
-import { useThemeStore } from "@/modules/core/context/Theme";
 import { ThemeProvider } from "@/modules/core/providers/ThemeProvider";
+
+import "./globals.css";
 
 const myFont = fontLocal({
   src: "../public/fonts/Raleway-VariableFont_wght.ttf",
