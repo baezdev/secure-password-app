@@ -1,7 +1,12 @@
 :root {
+  /* font */
+  --font-size: 1.2rem;
+  --font-weight: 500;
+
   /* text color */
   --text-color: #171717;
   --text-inverted: #0f172a;
+  --text-secondary: #929396;
 
   /* background color */
   --background: #ffffff;
@@ -25,6 +30,7 @@
   /* text color */
   --text-color: #e0e0e0;
   --text-inverted: #e0e0e0;
+  --text-secondary: #e0e0e0;
 
   /* background color */
   --background: #0f172a;
@@ -53,6 +59,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
 }
 
 body .Body__dark {
