@@ -19,7 +19,7 @@ export function Header() {
     <header className={css.Header} style={{ background: bgImage }}>
       <div className={css.Header_slogan}>
         <div>
-          <Heading variant="h1" size="large">
+          <Heading variant="h1" size="large" align="center">
             Con PassFort ¡Olvídate de olvidar!
           </Heading>
         </div>
