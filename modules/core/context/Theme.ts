@@ -9,20 +9,36 @@ interface ThemeStore {
 
 export const useThemeStore = create<ThemeStore>()(
   persist(
-    (set) => ({
-      theme: "light",
-      changeTheme: () =>
-        set((state) => ({ theme: state.theme === "light" ? "dark" : "light" })),
-      detectSystemTheme: () => {
-        if(typeof window === "undefined") return;
+    (set) => {
+      let listenerAdded = false;
 
-        const prefersScheme = window.matchMedia("(prefers-color-scheme: dark)");
-        set({ theme: prefersScheme.matches ? "dark" : "light" });
-        prefersScheme.addEventListener("change", (e) => {
-          set({ theme: e.matches ? "dark" : "light" });
-        });
-      },
-    }),
+      return {
+        theme: "light",
+        changeTheme: () =>
+          set((state) => {
+            const newTheme = state.theme === "light" ? "dark" : "light";
+
+            return {
+              theme: newTheme,
+            };
+          }),
+        detectSystemTheme: () => {
+          if (typeof window === "undefined") return;
+
+          const prefersScheme = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          );
+          set({ theme: prefersScheme.matches ? "dark" : "light" });
+
+          if (!listenerAdded) {
+            prefersScheme.addEventListener("change", (e) => {
+              set({ theme: e.matches ? "dark" : "light" });
+            });
+            listenerAdded = true;
+          }
+        },
+      };
+    },
     { name: "theme" }
   )
 );
