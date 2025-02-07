@@ -13,6 +13,7 @@
   transition-property: margin border;
   transition-duration: var(--transition-duration);
   transition-timing-function: ease-in-out;
+  z-index: 10;
 
   &.Nav__floating {
     margin-top: 1.6rem;
@@ -20,8 +21,7 @@
   }
 
   &.Nav__fixed {
-    margin-top: 0;
-    border-radius: 0 0 2rem 2rem;
+    margin-top: 8px;
   }
 
   .Nav_listContainer {
