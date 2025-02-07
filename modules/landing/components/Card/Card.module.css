@@ -1,0 +1,33 @@
+.Card {
+  background: var(--header-bg);
+  border-radius: 1rem;
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-top: .3rem;
+  }
+}
+
+.Card_icon {
+  background: var(--primary-light);
+  display: flex;
+  width: fit-content;
+  padding: .5rem;
+  border-radius: 9999px;
+  color: var(--secondary);
+}
+
+.Card_image {
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.2rem;
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
