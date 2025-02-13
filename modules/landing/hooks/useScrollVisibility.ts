@@ -26,7 +26,7 @@ export function useScrollVisibility() {
     return () => {
       if (elementRef.current) observer.unobserve(elementRef.current);
     };
-  }, [elementRef, options]);
+  }, [elementRef]);
 
   return {
     isVisible,
