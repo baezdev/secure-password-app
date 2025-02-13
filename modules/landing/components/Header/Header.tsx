@@ -1,12 +1,13 @@
 "use client";
 
+import { useThemeStore } from "@/modules/core/context/Theme";
+
 import { HeaderImage } from "./HeaderImage";
 import { Button } from "@/modules/core/design-system/Button";
 import { ArrowRight, CircleArrowsBottomIcon } from "@/assets/icons";
+import { Heading } from "@/modules/core/design-system/Heading/Heading";
 
 import css from "./Header.module.css";
-import { useThemeStore } from "@/modules/core/context/Theme";
-import { Heading } from "@/modules/core/design-system/Heading/Heading";
 
 export function Header() {
   const { theme } = useThemeStore();
@@ -20,7 +21,7 @@ export function Header() {
       <div className={css.Header_slogan}>
         <div>
           <Heading variant="h1" size="large" align="center">
-            Con PassFort ¡Olvídate de olvidar!
+            Con Pass Fort ¡Olvídate de olvidar!
           </Heading>
         </div>
         <p>
@@ -33,7 +34,7 @@ export function Header() {
         <Button ariaLabel="Iniciar sesión">
           Iniciar <ArrowRight />
         </Button>
-        <Button variant="secondary" ariaLabel="Saber más">
+        <Button variant="secondary" ariaLabel="Saber más" href="#features">
           Saber más <CircleArrowsBottomIcon />
         </Button>
       </div>
