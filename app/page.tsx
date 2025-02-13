@@ -1,13 +1,13 @@
 import { Nav } from "@/modules/landing/components/Nav";
 import { Header } from "@/modules/landing/components/Header";
-
-import css from "./page.module.css";
+import { Features } from "@/modules/landing/sections/Features";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Nav />
       <Header />
-    </main>
+      <Features />
+    </>
   );
 }
