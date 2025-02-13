@@ -11,7 +11,7 @@ import css from "./Nav.module.css";
 
 const listNavLinks = [
   {
-    href: "#",
+    href: "#features",
     text: "Caracteristicas",
   },
   {

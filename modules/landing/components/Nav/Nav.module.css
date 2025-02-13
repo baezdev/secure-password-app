@@ -10,7 +10,7 @@
   margin: 0 auto;
   inset-inline: 0;
   align-items: center;
-  transition-property: margin border;
+  transition-property: margin;
   transition-duration: var(--transition-duration);
   transition-timing-function: ease-in-out;
   z-index: 10;
