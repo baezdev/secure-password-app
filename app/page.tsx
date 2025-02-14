@@ -1,6 +1,6 @@
 import { Nav } from "@/modules/landing/components/Nav";
 import { Header } from "@/modules/landing/components/Header";
-import { Features } from "@/modules/landing/sections/Features";
+import { About, Features } from "@/modules/landing/sections";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <Nav />
       <Header />
       <Features />
+      <About />
     </>
   );
 }
