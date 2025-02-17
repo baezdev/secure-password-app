@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/modules/core/design-system/Button/Button";
 import { NavItemLink } from "./NavItemLink";
@@ -15,7 +16,7 @@ const listNavLinks = [
     text: "Caracteristicas",
   },
   {
-    href: "#",
+    href: "#about",
     text: "Sobre nosotros",
   },
   {
@@ -34,7 +35,7 @@ export function Nav() {
       }`}
     >
       <div className={css.Nav_listContainer}>
-        <a href="/" className={css.Nav_logo}>
+        <Link href="/" className={css.Nav_logo}>
           <Image
             src={
               theme === "light" ? "/images/logo.svg" : "/images/logo-dark.svg"
@@ -43,7 +44,7 @@ export function Nav() {
             width={150}
             height={45}
           />
-        </a>
+        </Link>
         <span className={css.u_separator}></span>
         <ul className={css.Nav_list}>
           {listNavLinks.map(({ href, text }) => (

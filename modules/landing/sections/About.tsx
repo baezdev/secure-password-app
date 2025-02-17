@@ -6,7 +6,7 @@ import { Heading } from "@/modules/core/design-system/Heading/Heading";
 
 export function About() {
   return (
-    <Section id="features">
+    <Section id="about">
       <div className={css.About_container}>
         <div className={css.About_image}>
           <Image

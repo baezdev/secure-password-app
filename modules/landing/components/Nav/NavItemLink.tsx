@@ -1,3 +1,4 @@
+import Link from "next/link";
 import css from "./NavItemLink.module.css";
 
 interface NavItemLinkProps {
@@ -7,8 +8,8 @@ interface NavItemLinkProps {
 
 export function NavItemLink({ href = "", children = "" }: NavItemLinkProps) {
   return (
-    <a href={href} className={css.NavItemLink}>
+    <Link href={href} className={css.NavItemLink}>
       {children}
-    </a>
+    </Link>
   );
 }
