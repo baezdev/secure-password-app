@@ -30,6 +30,11 @@
   &.Heading__semiBold {
     font-weight: 700;
   }
+
+  &h2 {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 }
 
 .Heading_pill {
