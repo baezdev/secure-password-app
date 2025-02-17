@@ -84,4 +84,5 @@ button {
 
 p {
   color: var(--text-color);
+  max-width: 65ch;
 }
