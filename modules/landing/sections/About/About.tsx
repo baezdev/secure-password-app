@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Section } from "../components/Section/Section";
+import { Section } from "../../components/Section/Section";
 
 import css from "./About.module.css";
 import { Heading } from "@/modules/core/design-system/Heading/Heading";

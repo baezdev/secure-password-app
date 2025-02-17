@@ -1,7 +1,7 @@
 import { Heading } from "@/modules/core/design-system/Heading/Heading";
-import { Card } from "../components/Card/Card";
-import { Section } from "../components/Section/Section";
-import { FEATURES_DATA } from "../data/features";
+import { Card } from "../../components/Card/Card";
+import { Section } from "../../components/Section/Section";
+import { FEATURES_DATA } from "../../data/features";
 
 import css from "./Features.module.css";
 
