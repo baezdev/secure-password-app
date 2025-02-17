@@ -1,19 +1,16 @@
 "use client";
 
 import { type ReactNode } from "react";
-import { Heading } from "@/modules/core/design-system/Heading/Heading";
-import { useScrollVisibility } from "../../hooks";
+import { useScrollVisibility } from "@landing/hooks/useScrollVisibility";
 
 import css from "./Section.module.css";
 
 interface SectionProps {
-  title: string;
   children: ReactNode;
-  description?: string;
   id?: string;
 }
 
-export function Section({ title, children, description, id }: SectionProps) {
+export function Section({ children, id }: SectionProps) {
   const { elementRef, isVisible } = useScrollVisibility();
 
   return (
@@ -24,14 +21,6 @@ export function Section({ title, children, description, id }: SectionProps) {
         }`}
         ref={elementRef}
       >
-        <div className={css.u_section_title}>
-          {description && (
-            <span className={css.u_section_pill}>{description}</span>
-          )}
-          <Heading variant="h2" size="medium" align="center" weight="semi-bold">
-            {title}
-          </Heading>
-        </div>
         <>{children}</>
       </div>
     </section>

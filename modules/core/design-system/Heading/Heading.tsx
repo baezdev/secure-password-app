@@ -6,7 +6,8 @@ interface HeadingProps {
   variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   size?: "small" | "medium" | "large";
   align?: "center" | "left" | "right";
-  weight?: "bold" | "semi-bold";
+  weight?: "bold" | "semiBold";
+  topDescription?: string;
 }
 
 export function Heading({
@@ -15,6 +16,7 @@ export function Heading({
   children,
   align = "left",
   weight = "bold",
+  topDescription,
 }: HeadingProps) {
   const Tag = variant as keyof JSX.IntrinsicElements;
   const classSize = {
@@ -29,14 +31,21 @@ export function Heading({
   };
   const classWeight = {
     bold: css.Heading__bold,
-    "semi-bold": css.Heading__semiBold,
+    semiBold: css.Heading__semiBold,
   };
 
   return (
-    <Tag
-      className={`${css.Heading} ${classSize[size]} ${classAlign[align]} ${classWeight[weight]}`}
-    >
-      {children}
-    </Tag>
+    <>
+      {topDescription && (
+        <div className={`${css.Heading_pill} ${classAlign[align]}`}>
+          <span>{topDescription}</span>
+        </div>
+      )}
+      <Tag
+        className={`${css.Heading} ${classSize[size]} ${classAlign[align]} ${classWeight[weight]}`}
+      >
+        {children}
+      </Tag>
+    </>
   );
 }

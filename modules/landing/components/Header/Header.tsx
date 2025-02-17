@@ -3,9 +3,9 @@
 import { useThemeStore } from "@/modules/core/context/Theme";
 
 import { HeaderImage } from "./HeaderImage";
-import { Button } from "@/modules/core/design-system/Button";
+import { Button } from "@core/design-system/Button/Button";
 import { ArrowRight, CircleArrowsBottomIcon } from "@/assets/icons";
-import { Heading } from "@/modules/core/design-system/Heading/Heading";
+import { Heading } from "@core/design-system/Heading/Heading";
 
 import css from "./Header.module.css";
 

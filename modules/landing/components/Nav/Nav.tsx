@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 
-import { Button } from "@/modules/core/design-system/Button";
+import { Button } from "@/modules/core/design-system/Button/Button";
 import { NavItemLink } from "./NavItemLink";
-import { IconButton } from "@/modules/core/design-system/IconButton";
+import { IconButton } from "@/modules/core/design-system/Button/IconButton";
 import { MoonOffIcon, UserIcon, MoonIcon } from "@/assets/icons";
-import { useNav } from "../../hooks";
+import { useNav } from "../../hooks/useNav";
 
 import css from "./Nav.module.css";
 

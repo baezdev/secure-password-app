@@ -23,25 +23,43 @@
     font-size: 5rem;
   }
 
-  &.Heading__center {
-    text-align: center;
-  }
-
-  &.Heading__left {
-    text-align: left;
-  }
-
-  &.Heading__right {
-    text-align: right;
-  }
-
   &.Heading__bold {
     font-weight: 800;
   }
 
-  &.Heading__semi-bold {
-    font-weight: 600;
+  &.Heading__semiBold {
+    font-weight: 700;
   }
+}
+
+.Heading_pill {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+
+  & span {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.Heading__center {
+  text-align: center;
+  justify-content: center;
+}
+
+.Heading__left {
+  text-align: left;
+  justify-content: left;
+}
+
+.Heading__right {
+  text-align: right;
+  justify-content: right;
 }
 
 @keyframes moveText {
