@@ -38,6 +38,7 @@ export function HeaderImage() {
         alt="Imagen de una huella con un candado en el centro, represetando seguridad"
         width={240}
         height={240}
+        loading="eager"
       />
       <div className={`${css.Header_logos} ${css.Header_logos__right}`}>
         <Image
