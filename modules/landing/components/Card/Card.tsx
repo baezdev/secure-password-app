@@ -16,7 +16,7 @@ export function Card({ icon: Icon, title, description, image }: CardProps) {
     <article className={css.Card}>
       <i className={css.Card_icon}>{cloneElement(<Icon />, { size: 34 })}</i>
       <div>
-        <Heading size="small" variant="h6" weight="semi-bold">
+        <Heading size="small" variant="h6" weight="semiBold">
           {title}
         </Heading>
         <p>{description}</p>
