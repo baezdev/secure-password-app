@@ -1,4 +1,4 @@
-import { Heading } from "@/modules/core/design-system/Heading/Heading";
+import { Heading } from "@/modules/core/components/Heading/Heading";
 import { Card } from "../../components/Card/Card";
 import { Section } from "../../components/Section/Section";
 import { FEATURES_DATA } from "../../data/features";

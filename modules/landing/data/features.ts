@@ -1,5 +1,5 @@
 import { FC, SVGProps } from "react";
-import { BoltIcon, DevicesIcon, PasswordIcon } from "@/assets/icons";
+import { BoltIcon, DevicesIcon, PasswordIcon } from "@core/components/Icons/Icons";
 
 type Feature = {
   title: string;
