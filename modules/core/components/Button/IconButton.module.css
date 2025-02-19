@@ -1,0 +1,19 @@
+.IconButton {
+  background: var(--background);
+  border-radius: 99999px;
+  border: none;
+  color: var(--primary);
+  height: auto;
+  width: 56px;
+  transition-property: background border;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &:hover {
+    background: var(--secondary-light);
+  }
+}

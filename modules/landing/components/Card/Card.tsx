@@ -1,6 +1,6 @@
 import { cloneElement, FC, SVGProps } from "react";
 import css from "./Card.module.css";
-import { Heading } from "@/modules/core/design-system/Heading/Heading";
+import { Heading } from "@/modules/core/components/Heading/Heading";
 
 interface CardProps {
   icon: FC<SVGProps<SVGSVGElement>>;

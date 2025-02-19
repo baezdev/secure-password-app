@@ -2,10 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/modules/core/design-system/Button/Button";
+import { Button } from "@/modules/core/components/Button/Button";
 import { NavItemLink } from "./NavItemLink";
-import { IconButton } from "@/modules/core/design-system/Button/IconButton";
-import { MoonOffIcon, UserIcon, MoonIcon } from "@/assets/icons";
+import { IconButton } from "@/modules/core/components/Button/IconButton";
+import { MoonOffIcon, UserIcon, MoonIcon } from "@core/components/Icons/Icons";
 import { useNav } from "../../hooks/useNav";
 
 import css from "./Nav.module.css";
@@ -20,7 +20,7 @@ const listNavLinks = [
     text: "Sobre nosotros",
   },
   {
-    href: "#",
+    href: "#questions",
     text: "Preguntas frecuentes",
   },
 ];

@@ -3,9 +3,9 @@
 import { useThemeStore } from "@/modules/core/context/Theme";
 
 import { HeaderImage } from "./HeaderImage";
-import { Button } from "@core/design-system/Button/Button";
-import { ArrowRight, CircleArrowsBottomIcon } from "@/assets/icons";
-import { Heading } from "@core/design-system/Heading/Heading";
+import { Button } from "@/modules/core/components/Button/Button";
+import { ArrowRight, CircleArrowsBottomIcon } from "@core/components/Icons/Icons";
+import { Heading } from "@/modules/core/components/Heading/Heading";
 
 import css from "./Header.module.css";
 
@@ -14,7 +14,7 @@ export function Header() {
 
   const bgImage = `url("${
     theme === "light" ? "/images/bg.svg" : "/images/bg-dark.svg"
-  }"), linear-gradient(to bottom, var(--header-bg) 55%, var(--background) 100%)`;
+  }"), linear-gradient(to bottom, var(--secondary-bg) 55%, var(--background) 100%)`;
 
   return (
     <header className={css.Header} style={{ background: bgImage }}>
