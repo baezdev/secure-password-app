@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/modules/core/providers/ThemeProvider";
 import "./globals.css";
 
 const myFont = fontLocal({
-  src: "../public/fonts/Raleway-VariableFont_wght.ttf",
+  src: "../public/fonts/Raleway.ttf",
   variable: "--font-raleway",
 });
 
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={`${myFont.className}`}>
+    <html lang="es" className={`${myFont.className}`}>
+      <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
