@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Section } from "../../components/Section/Section";
 
 import css from "./About.module.css";
-import { Heading } from "@/modules/core/design-system/Heading/Heading";
+import { Heading } from "@/modules/core/components/Heading/Heading";
 
 export function About() {
   return (

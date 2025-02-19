@@ -22,5 +22,6 @@
 
   & p {
     text-wrap: pretty;
+    color: var(--text-secondary);
   }
 }
