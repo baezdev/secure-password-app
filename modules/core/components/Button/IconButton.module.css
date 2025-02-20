@@ -3,7 +3,7 @@
   border-radius: 99999px;
   border: none;
   color: var(--primary);
-  height: auto;
+  height: 56px;
   width: 56px;
   transition-property: background border;
   transition-duration: var(--transition-duration);
