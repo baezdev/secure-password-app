@@ -3,7 +3,7 @@
   list-style: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  max-height: 5rem;
+  max-height: 7rem;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
 
@@ -29,7 +29,7 @@
   }
 
   &[open] {
-    max-height: 10rem;
+    max-height: 30rem;
     background-color: var(--primary-light);
   }
 

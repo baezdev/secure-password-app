@@ -1,8 +1,13 @@
 .About_container {
-  display: grid;
-  align-items: start;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+  
+  @media screen and (width >= 768px) {
+    display: grid;
+    align-items: start;
+    gap: 2rem;
+    grid-template-columns: 1fr 1.5fr;
+  }
 }
 
 .About_image {
