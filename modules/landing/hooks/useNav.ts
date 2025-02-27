@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 export function useNav() {
   const [scrollTop, setScrollTop] = useState(0);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const { changeTheme, detectSystemTheme, theme } = useThemeStore();
 
   useEffect(() => {
@@ -21,5 +22,13 @@ export function useNav() {
     };
   }, []);
 
-  return { scrollTop, changeTheme, theme };
+  const toggleMenu = (value: boolean | null) => {
+    if (value !== null) {
+      setIsOpenMenu(value);
+      return;
+    }
+    setIsOpenMenu(!isOpenMenu);
+  };
+
+  return { scrollTop, changeTheme, theme, toggleMenu, isOpenMenu };
 }

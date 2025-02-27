@@ -15,7 +15,6 @@ import {
 import { useNav } from "../../hooks/useNav";
 
 import css from "./Nav.module.css";
-import { useState } from "react";
 
 const listNavLinks = [
   {
@@ -33,8 +32,7 @@ const listNavLinks = [
 ];
 
 export function Nav() {
-  const { changeTheme, scrollTop, theme } = useNav();
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const { changeTheme, scrollTop, theme, isOpenMenu, toggleMenu } = useNav();
 
   return (
     <nav
@@ -52,6 +50,7 @@ export function Nav() {
             alt="Logo de PassFort"
             width={150}
             height={45}
+            priority
           />
         </Link>
         <span className={css.u_separator}></span>
@@ -59,13 +58,13 @@ export function Nav() {
           <IconButton
             icon={!isOpenMenu ? MenuOpenIcon : MenuCloseIcon}
             ariaLabel={!isOpenMenu ? "Abrir menú" : "Cerrar menú"}
-            onClick={() => setIsOpenMenu(!isOpenMenu)}
+            onClick={() => toggleMenu(null)}
           />
         </div>
       </div>
       <ul className={css.Nav_list}>
         {listNavLinks.map(({ href, text }) => (
-          <li key={`${href}-${text}`}>
+          <li key={`${href}-${text}`} onClick={() => toggleMenu(false)}>
             <NavItemLink href={href}>{text}</NavItemLink>
           </li>
         ))}
