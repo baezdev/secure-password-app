@@ -5,10 +5,17 @@ import Link from "next/link";
 import { Button } from "@/modules/core/components/Button/Button";
 import { NavItemLink } from "./NavItemLink";
 import { IconButton } from "@/modules/core/components/Button/IconButton";
-import { MoonOffIcon, UserIcon, MoonIcon } from "@core/components/Icons/Icons";
+import {
+  MoonOffIcon,
+  UserIcon,
+  MoonIcon,
+  MenuOpenIcon,
+  MenuCloseIcon,
+} from "@core/components/Icons/Icons";
 import { useNav } from "../../hooks/useNav";
 
 import css from "./Nav.module.css";
+import { useState } from "react";
 
 const listNavLinks = [
   {
@@ -27,14 +34,16 @@ const listNavLinks = [
 
 export function Nav() {
   const { changeTheme, scrollTop, theme } = useNav();
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   return (
     <nav
       className={`${css.Nav} ${
         scrollTop > 100 ? css.Nav__fixed : css.Nav__floating
       }`}
+      data-open={isOpenMenu}
     >
-      <div className={css.Nav_listContainer}>
+      <div className={css.Nav_logoContainer}>
         <Link href="/" className={css.Nav_logo}>
           <Image
             src={
@@ -46,14 +55,21 @@ export function Nav() {
           />
         </Link>
         <span className={css.u_separator}></span>
-        <ul className={css.Nav_list}>
-          {listNavLinks.map(({ href, text }) => (
-            <li key={`${href}-${text}`}>
-              <NavItemLink href={href}>{text}</NavItemLink>
-            </li>
-          ))}
-        </ul>
+        <div className={css.Nav_menuButton}>
+          <IconButton
+            icon={!isOpenMenu ? MenuOpenIcon : MenuCloseIcon}
+            ariaLabel={!isOpenMenu ? "Abrir menú" : "Cerrar menú"}
+            onClick={() => setIsOpenMenu(!isOpenMenu)}
+          />
+        </div>
       </div>
+      <ul className={css.Nav_list}>
+        {listNavLinks.map(({ href, text }) => (
+          <li key={`${href}-${text}`}>
+            <NavItemLink href={href}>{text}</NavItemLink>
+          </li>
+        ))}
+      </ul>
       <div className={css.Nav_actions}>
         <IconButton
           icon={theme === "light" ? MoonIcon : MoonOffIcon}
