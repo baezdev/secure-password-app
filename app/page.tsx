@@ -3,6 +3,7 @@ import { Header } from "@landing/components/Header/Header";
 import { About } from "@landing/sections/About/About";
 import { Features } from "@landing/sections/Features/Features";
 import { Questions } from "@landing/sections/Questions/Questions";
+import { Footer } from "@landing/sections/Footer/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Features />
       <About />
       <Questions />
+      <Footer />
     </>
   );
 }
